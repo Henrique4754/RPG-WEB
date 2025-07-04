@@ -40,11 +40,6 @@
 .imgmobile{
     display: none;
 }
-
-footer {
-  text-align: center;
-}
-
 @media (max-width: 600px) {
   main {
     max-width: 600px;
