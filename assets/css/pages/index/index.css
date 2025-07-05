@@ -31,14 +31,14 @@
   text-transform: capitalize;
   text-align: right;
 }
-.novomundo .imgdesk{
+.novomundo .imgdesk {
   border-radius: 1rem;
   margin: auto;
   width: 30%;
   height: 310px;
 }
-.imgmobile{
-    display: none;
+.imgmobile {
+  display: none;
 }
 @media (max-width: 600px) {
   main {
@@ -47,6 +47,10 @@
   }
   .velhomundo {
     display: grid;
+  }
+  .sobrevelhomundo > h2 {
+    text-transform: capitalize;
+    text-align: center;
   }
   .velhomundo .sobrevelhomundo {
     text-align: justify;
@@ -65,6 +69,10 @@
   .novomundo {
     display: grid;
   }
+  .sobrenovomundo > h2 {
+    text-transform: capitalize;
+    text-align: center;
+  }
   .novomundo .sobrenovomundo {
     text-align: justify;
     width: 90%;
@@ -80,7 +88,7 @@
     width: 90%;
     height: auto;
   }
-  .imgdesk{
+  .imgdesk {
     display: none;
   }
 }
