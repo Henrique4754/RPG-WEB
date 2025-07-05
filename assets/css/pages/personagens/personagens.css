@@ -21,12 +21,15 @@
   text-align: center;
   /* Usamos IDs para a navegação com os links */
 }
-.carousel-item img {
+.carousel-item .imgdesk {
   width: 100%;
   height: auto;
   border-radius: 8px;
   object-fit: cover;
   max-height: 450px; /* Define uma altura máxima para as imagens */
+}
+.imgmobile {
+  display: none;
 }
 .carousel-item p {
   height: 120px;
@@ -40,7 +43,7 @@
 }
 .carousel-nav {
   position: absolute;
-  bottom: -1px;
+  bottom: -20px;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
@@ -65,15 +68,26 @@
     position: relative;
   }
   .carousel-item p {
-  height: 120px;
-  width: 100%;
-  text-align: justify;
-  margin: 1rem auto 0 auto;
-  font-size: 1rem;
-  color: #555;
-  line-height: 1.6;
-  overflow-y: scroll;
-}
+    height: 120px;
+    width: 100%;
+    text-align: justify;
+    margin: 1rem auto 0 auto;
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+    overflow-y: scroll;
+  }
+  .carousel-item .imgmobile {
+    display: flex;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+    max-height: 450px; /* Define uma altura máxima para as imagens */
+  }
+  .imgdesk {
+    display: none;
+  }
 
   .carousel-nav {
     display: none;
