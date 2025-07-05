@@ -16,7 +16,7 @@
 .carousel-item {
   flex: 0 0 100%; /* Cada item ocupa 100% da largura */
   scroll-snap-align: center; /* Centraliza o item no "snap" */
-  padding: 20px;
+  padding: 0.5rem;
   box-sizing: border-box; /* Garante que o padding não afete a largura total */
   text-align: center;
   /* Usamos IDs para a navegação com os links */
@@ -25,7 +25,7 @@
   width: 100%;
   height: auto;
   border-radius: 8px;
-  object-fit: contain;
+  object-fit: cover;
   max-height: 450px; /* Define uma altura máxima para as imagens */
 }
 .carousel-item p {
@@ -66,7 +66,7 @@
   }
   .carousel-item p {
   height: 120px;
-  width: 90%;
+  width: 100%;
   text-align: justify;
   margin: 1rem auto 0 auto;
   font-size: 1rem;
