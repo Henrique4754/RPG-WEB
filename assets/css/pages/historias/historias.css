@@ -1,5 +1,44 @@
 @import url(../../global/global.css);
-h5 {
-  text-align: center;
-  font-size: 3rem;
+.history {
+  display: flex;
+  margin-bottom: 1rem;
+}
+
+.history > .trollhistory {
+  padding-right: 1rem;
+  width: 60%;
+  text-align: justify;
+}
+.history img {
+  margin: auto 0;
+  border-radius: 1rem;
+  width: 50%;
+  height: 50%;
+}
+
+@media (max-width: 600px) {
+  main {
+    max-width: 600px;
+    min-width: 420px;
+  }
+  .history {
+    display: grid;
+  }
+  .history h2 {
+    text-align: center;
+  }
+  .history .trollhistory {
+    text-align: justify;
+    width: 95%;
+    margin: 0 auto;
+    padding: 0;
+    margin-bottom: 1rem;
+  }
+  .history img {
+      padding: 0;
+      margin: 0 auto;
+      width: 90%;
+      height: auto;
+    }
+  }
 }
