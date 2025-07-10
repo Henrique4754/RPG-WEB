@@ -1,68 +1,74 @@
 @import url(../../global/global.css);
-.history {
-  height: fit-content;
-  grid-template-columns: 60% 40%;
-  display: grid;
+.story_sect {
+  display: flex;
+  margin-bottom: 1.5rem;
+  justify-content: space-between;
+}
+.story_sect .imgdesk {
+  width: 40%;
+  border-radius: 1rem;
+  box-shadow: 0 2px 4px hsla(0, 0%, 20%, 0.16);
+}
+.story_content_mobile {
+  display: none;
+}
+
+.story_content_imgright {
+  padding-right: 1rem;
+  width: 60%;
+  text-align: justify;
+}
+.story_content_imgright h2 {
+  text-align: left;
+}
+.story_content_imgleft {
+  padding-left: 1rem;
+  width: 60%;
+  text-align: justify;
+}
+.story_content_imgleft h2 {
+  text-align: right;
+}
+.imgmobile {
+  display: none;
+}
+.img_sect img {
+  width: 80%;
+  border-radius: 1rem;
   margin-bottom: 1rem;
+  box-shadow: 0 2px 4px hsla(0, 0%, 20%, 0.16);
 }
-.history .gridimg{
-  margin: auto 0;
-}
-.soloimg{
-  border-radius: 1rem;
-  width: 100%;
-}
-.gridimg img{
-  border-radius: 1rem;
-  width: 100%;
-}
-.gridfullimg img{
-  width: 90%;
- }
-.gridtext{
-  margin: 0 1rem 0 1rem;
-  text-align: justify;
-}
-
-
-
-
-
-.text-to-image {
-  padding-right: 1rem;
-  width: 60%;
-  text-align: justify;
-}
-.image-to-text{
-  padding-right: 1rem;
-  width: 60%;
-  text-align: justify;
-}
-
 
 @media (max-width: 600px) {
   main {
     max-width: 600px;
     min-width: 420px;
   }
-  .history {
+  .story_content_imgright,
+  .story_content_imgleft,
+  .imgdesk {
+    display: none;
+  }
+  .story_sect {
     display: grid;
   }
-  .history h2 {
-    text-align: center;
+  .story_sect .imgmobile {
+    display: block;
+    width: 90%;
+    border-radius: 1rem;
+    box-shadow: 0 2px 4px hsla(0, 0%, 20%, 0.16);
+    margin: auto;
   }
-  .history .trollhistory {
-    text-align: justify;
+  .img_sect img {
+    width: 90%;
+  }
+  .story_content_mobile {
+    display: block;
     width: 95%;
-    margin: 0 auto;
-    padding: 0;
-    margin-bottom: 1rem;
+    text-align: justify;
+    margin: auto;
   }
-  .history img {
-      padding: 0;
-      margin: 0 auto;
-      width: 90%;
-      height: auto;
-    }
+  .story_content_mobile h2 {
+    text-align: center;
   }
 }

@@ -32,14 +32,15 @@
   display: none;
 }
 .carousel-item p {
-  height: 120px;
-  width: 500px;
+  height: 200px;
+  width: 600px;
   text-align: justify;
   margin: 1rem auto 0 auto;
-  font-size: 1rem;
+  font-size: 1.3rem;
   color: #555;
-  line-height: 1.6;
+  line-height: 1.8;
   overflow-y: scroll;
+  scrollbar-width: none;
 }
 .carousel-nav {
   position: absolute;
