@@ -33,6 +33,7 @@
   display: none;
 }
 .img_sect img {
+  display: inline-block;
   width: 80%;
   border-radius: 1rem;
   margin-bottom: 1rem;

@@ -44,7 +44,7 @@
 }
 .carousel-nav {
   position: absolute;
-  bottom: -20px;
+  bottom: 260px;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
@@ -54,7 +54,7 @@
   width: 12px;
   height: 12px;
   border-radius: 50%;
-  background-color: #c5c5c5;
+  background-color: #ffffff;
   transition: background-color 0.3s ease;
 }
 @media (max-width: 600px) {
