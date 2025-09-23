@@ -30,6 +30,12 @@ nav {
 }
 .navbar-links > a {
   text-decoration: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0)  ;
+  color: black;
+  transition: all 0.3s ease;
+}
+.navbar-links > a:hover {
+  border-bottom: 1px solid black  ;
   color: black;
 }
 main {
@@ -40,6 +46,7 @@ main {
   flex-direction: column;
   padding: 20px;
   background-color: rgba(255, 255, 255, 0.815);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 .hero-bg {
   z-index: -1;
@@ -54,7 +61,17 @@ main {
   text-align: center;
   margin-top: 50px;
 }
+.welcome-section h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+.welcome-section p {
+  font-size: 1.2rem;
 
+  color: #555;
+}
 .latest-updates {
   margin-top: 50px;
   display: flex;
@@ -85,4 +102,23 @@ main {
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
   padding: 20px;
   flex: 1 1 calc(33% - 20px);
+}
+.btn{
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #007BFF;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+.card-btn{
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007BFF;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
 }
