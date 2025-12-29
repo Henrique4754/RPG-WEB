@@ -22,12 +22,7 @@ main {
 }
 
 /* ↓ Inicio na inha 19, cabeçalho e navbar ↓ */
-header {
-  padding: 0.5rem;
-  text-align: center;
-  box-shadow: 0 2px 4px hsla(0, 0%, 20%, 0.16);
-  margin-bottom: 1rem;
-}
+
 
 header > #navimg {
   border-radius: 9999px;
