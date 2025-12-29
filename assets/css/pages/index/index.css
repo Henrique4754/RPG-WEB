@@ -4,6 +4,10 @@
   box-sizing: border-box;
   font-family: poppins;
 }
+a {
+  text-decoration: none;
+  color: inherit;
+}
 /* Obrigado gemini! */
 body {
   /* O caminho para a sua imagem */

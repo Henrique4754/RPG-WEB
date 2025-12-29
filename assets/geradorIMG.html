@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+    </style>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="apple-touch-icon" sizes="180x180" href="images/global/peregrinos favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/global/peregrinos favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/global/peregrinos favicon/favicon-16x16.png">
+    <link rel="manifest" href="images/global/peregrinos favicon/site.webmanifest">
+    <link rel="stylesheet" href= "css/pages/index/index.css">
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="theme-color" content="#ffffff" />
+    <script src="scripts/gerador.js" defer></script>
+    <title>Gerador Arcano</title>
+</head>
+
+<body>
+    <nav>
+        <div class="navbar-links">
+            <img src="images/pages/index/Brasão Os Peregrinos.jpg" alt="Logo Peregrinos" />
+            <a href="home.html">Home</a>
+            <a href="">Historias</a>
+            <a href="">Os Mundos</a>
+            <a href="">Personagens</a>
+            <a href="">Downloads</a>
+            <a href="">Galeria</a>
+            <a href="">Sobre</a>
+        </div>
+        <div class="navbar-search">
+            <input type="text" placeholder="Pesquisar..." />
+            <button type="submit">Buscar</button>
+        </div>
+    </nav>
+
+    <div class="container">
+        <header>
+            <h1>Gemini <span>Image Studio</span></h1>
+            <p>Transforma as tuas palavras em arte digital</p>
+        </header>
+
+        <div class="input-section">
+            <textarea id="promptInput" placeholder="Descreve a imagem que imaginas... (ex: Uma cidade futurista flutuante)"></textarea>
+            <button onclick="gerarImagem()" id="btnGerar">
+                <span>Gerar Arte</span>
+                <div class="loader" id="loader"></div>
+            </button>
+        </div>
+
+        <div class="result-section" id="resultado">
+            <div class="placeholder-text">
+                A tua criação aparecerá aqui...
+            </div>
+        </div>
+    </div>
+</body>
