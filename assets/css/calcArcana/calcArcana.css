@@ -1,0 +1,34 @@
+@import url(../../global/global.css);
+body {
+  /* O caminho para a sua imagem */
+  background-image: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.5),
+      rgba(255, 255, 255, 0.5)
+    ),
+    url("../../images/global/calculadora\ arcana\ bg.png");
+
+  /* Faz a imagem cobrir todo o espaço disponível sem distorcer */
+  background-size: cover;
+
+  /* Evita que a imagem se repita (efeito azulejo) */
+  background-repeat: no-repeat;
+
+  /* Centraliza a imagem na tela */
+  background-position: center center;
+
+  /* (Opcional) Mantém a imagem fixa enquanto a página rola */
+  background-attachment: fixed;
+
+  /* (Opcional) Cor de fundo de segurança caso a imagem não carregue */
+  background-color: #333;
+  min-height: 100vh; /* Garante altura total */
+}
+.calculadora-section {
+  background-color: rgba(255, 255, 255, 0.8); /* Fundo branco semi-transparente */
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 800px;
+  margin: 40px auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}

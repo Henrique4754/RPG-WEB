@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="css/gerador/gerador.css">
     <meta name="msapplication-TileColor" content="#ffffff" />
     <meta name="theme-color" content="#ffffff" />
-    <script src="scripts/gerador.js" defer></script>
+    <script type="module" src="scripts/gerador.js" defer></script>
     <title>Gerador Arcano</title>
 </head>
 
@@ -24,12 +24,12 @@
     <nav>
         <div class="navbar-links">
             <img src="images/pages/index/Brasão Os Peregrinos.jpg" alt="Logo Peregrinos" />
-            <a href="home.html">Home</a>
-            <a href="">Historias</a>
+            <a href="index.html">Home</a>
+            <a href="geradorIMG.html">Gerador Arcano</a>
             <a href="">Os Mundos</a>
             <a href="">Personagens</a>
             <a href="">Downloads</a>
-            <a href="">Galeria</a>
+            <a href="">Galeria</a>  
             <a href="">Sobre</a>
         </div>
         <!-- <div class="navbar-search">
@@ -37,4 +37,21 @@
             <button type="submit">Buscar</button>
         </div> -->
     </nav>
+    <main>
+        <section class="gerador-section">
+            <h1>Gerador de Imagens Arcano</h1>
+            <p>Utilize o poder da magia para criar imagens incríveis!</p>
+            <div class="imagem-gerada" id="imagemGeradaContainer">
+                <!-- A imagem gerada será exibida aqui -->
+            </div>
+            <div class="gerador-container">
+                <input type="text" id="promptInput" placeholder="Descreva a imagem a gerar..." />
+            </div>
+            <div class="buttons-container">
+                <button id="gerarBtn">Gerar Imagem</button>
+                <button id="downloadBtn">Baixar Imagem</button>
+            </div>
+
+        </section>
+    </main>
 </body>
