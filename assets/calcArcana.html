@@ -13,10 +13,9 @@
     <link rel="icon" type="image/png" sizes="16x16" href="images/global/peregrinos favicon/favicon-16x16.png">
     <link rel="manifest" href="images/global/peregrinos favicon/site.webmanifest">
     <link rel="stylesheet" href="css/calcArcana/calcArcana.css">
-    <link rel="stylesheet" href="css/global/global.css">
     <meta name="msapplication-TileColor" content="#ffffff" />
     <meta name="theme-color" content="#ffffff" />
-    <script type="module" src="scripts/gerador.js" defer></script>
+    <script src="scripts/calcArcana.js"></script>
     <title>Gerador Arcano</title>
 </head>
 
@@ -43,68 +42,67 @@
             <div class="calculadora-pericias">
                 <!-- Conteúdo da calculadora de perícias vai aqui -->
                 <select name="classe" id="classe">
-                    <option value="">--Selecione sua classe--</option>
-                    <option value="barbaro">Bárbaro</option>
-                    <option value="bardo">Bardo</option>
-                    <option value="clerigo">Clérigo</option>
-                    <option value="druida">Druida</option>
-                    <option value="guerreiro">Guerreiro</option>
-                    <option value="monge">Monge</option>
-                    <option value="paladino">Paladino</option>
-                    <option value="ranger">Ranger</option>
-                    <option value="ladino">Ladino</option>
-                    <option value="feiticeiro">Feiticeiro</option>
-                    <option value="mago">Mago</option>
+                    <option value=>--Selecione sua classe--</option>
+                    <option value=4>Bárbaro</option>
+                    <option value=4>Bardo</option>
+                    <option value=2>Clérigo</option>
+                    <option value=4>Druida</option>
+                    <option value=2>Guerreiro</option>
+                    <option value=4>Monge</option>
+                    <option value=2>Paladino</option>
+                    <option value=4>Ranger</option>
+                    <option value=8>Ladino</option>
+                    <option value=2>Feiticeiro</option>
+                    <option value=2>Mago</option>
                 </select>
                 
                 <select name="nivel" id="nivel">
-                    <option value="">--Selecione seu nível--</option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                    <option value="6">6</option>
-                    <option value="7">7</option>
-                    <option value="8">8</option>
-                    <option value="9">9</option>
-                    <option value="10">10</option>
-                    <option value="11">11</option>
-                    <option value="12">12</option>
-                    <option value="13">13</option>
-                    <option value="14">14</option>
-                    <option value="15">15</option>
-                    <option value="16">16</option>
-                    <option value="17">17</option>
-                    <option value="18">18</option>
-                    <option value="19">19</option>
-                    <option value="20">20</option>
-
+                    <option value=>--Selecione seu nível--</option>
+                    <option value=1>1</option>
+                    <option value=2>2</option>
+                    <option value=3>3</option>
+                    <option value=4>4</option>
+                    <option value=5>5</option>
+                    <option value=6>6</option>
+                    <option value=7>7</option>
+                    <option value=8>8</option>
+                    <option value=9>9</option>
+                    <option value=10>10</option>
+                    <option value=11>11</option>
+                    <option value=12>12</option>
+                    <option value=13>13</option>
+                    <option value=14>14</option>
+                    <option value=15>15</option>
+                    <option value=16>16</option>
+                    <option value=17>17</option>
+                    <option value=18>18</option>
+                    <option value=19>19</option>
+                    <option value=20>20</option>
                 </select>
 
-                <select name="intnivel" id="intnivel">
+                <select name="intMod" id="intMod">
                     <option value="">--Modificador de inteligência--</option>
-                    <option value="1">+1</option>
-                    <option value="2">+2</option>
-                    <option value="3">+3</option>
-                    <option value="4">+4</option>
-                    <option value="5">+5</option>
-                    <option value="6">+6</option>
-                    <option value="7">+7</option>
-                    <option value="8">+8</option>
-                    <option value="9">+9</option>
-                    <option value="10">+10</option>
+                    <option value=1>+1</option>
+                    <option value=2>+2</option>
+                    <option value=3>+3</option>
+                    <option value=4>+4</option>
+                    <option value=5>+5</option>
+                    <option value=6>+6</option>
+                    <option value=7>+7</option>
+                    <option value=8>+8</option>
+                    <option value=9>+9</option>
+                    <option value=10>+10</option>
                 </select>
-                <button id="calcularBtn">Calcular perícias</button>
+                <button onclick="pericia()" id="calcularBtn">Calcular perícias</button>
                 <div id="resultado">
                     <!-- Resultado será exibido aqui -->
                     <h3>Seus pontos de perícia são:</h3>
                     <h4>No Primeiro nível:</h4>
-                    <p id="primeironivel">24</p>
+                    <p id="primeironivel"></p>
                     <h4>Níveis subsequentes:</h4>
-                    <p id="subsequentes">60</p>
+                    <p id="subsequentes"></p>
                     <h4>Total de pontos:</h4>
-                    <p id="totalpontos">74</p>
+                    <p id="totalpontos"></p>
                 </div>
             </div>
         </section>
