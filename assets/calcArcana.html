@@ -16,11 +16,11 @@
     <meta name="msapplication-TileColor" content="#ffffff" />
     <meta name="theme-color" content="#ffffff" />
     <script src="scripts/calcArcana.js"></script>
-    <title>Gerador Arcano</title>
+    <title>Calculadora Arcana</title>
 </head>
 
 <body>
-    <nav>
+    <!-- <nav>
         <div class="navbar-links">
             <img src="images/pages/index/Brasão Os Peregrinos.jpg" alt="Logo Peregrinos" />
             <a href="index.html">Home</a>
@@ -35,8 +35,10 @@
             <input type="text" placeholder="Pesquisar..." />
             <button type="submit">Buscar</button>
         </div> -->
-    </nav>
+    </nav> -->
     <main>
+        <aside>
+        </aside>
         <section class="calculadora-section">
             <h2>Calculadora de Perícias</h2>
             <div class="calculadora-pericias">
@@ -55,7 +57,7 @@
                     <option value=2>Feiticeiro</option>
                     <option value=2>Mago</option>
                 </select>
-                
+
                 <select name="nivel" id="nivel">
                     <option value=>--Selecione seu nível--</option>
                     <option value=1>1</option>
@@ -98,13 +100,17 @@
                     <!-- Resultado será exibido aqui -->
                     <h3>Seus pontos de perícia são:</h3>
                     <h4>No Primeiro nível:</h4>
-                    <p id="primeironivel"></p>
+                    <p id="primeironivel">0</p>
                     <h4>Níveis subsequentes:</h4>
-                    <p id="subsequentes"></p>
+                    <p id="subsequentes">0</p>
                     <h4>Total de pontos:</h4>
-                    <p id="totalpontos"></p>
+                    <p id="totalpontos">0</p>
                 </div>
             </div>
+            
+        </section>
+        <section class="calculadora-section">
+            <h2>Calculadora de Atributos</h2>
         </section>
     </main>
 </body>

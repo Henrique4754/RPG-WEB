@@ -11,6 +11,12 @@ function pericia() {
   const valorPrimNivel = parseFloat((valorClasse + valorIntMod) * 4)
   const valorNivelSub = parseFloat((valorClasse + valorIntMod) * valorNivel)
 
+  const totalPoints = valorPrimNivel + valorNivelSub
+
+  document.getElementById('primeironivel').textContent = valorPrimNivel
+  document.getElementById('subsequentes').textContent = valorNivelSub
+  document.getElementById('totalpontos').textContent = totalPoints
+
   if (valorClasse === " ") {
     alert("Por favor selecione uma classe!");
     return;
