@@ -1,3 +1,4 @@
+// Calculadora de pericias:
 function pericia() {
   const classSelection = document.getElementById("classe");
   const valorClasse = parseInt(classSelection.value);
