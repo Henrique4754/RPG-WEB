@@ -24,20 +24,20 @@
     <nav>
         <div class="navbar-links">
             <img src="images/pages/index/Brasão Os Peregrinos.jpg" alt="Logo Peregrinos" />
-            <a href="index.html">Home</a>
+            <!-- <a href="index.html">Home</a>
             <a href="geradorIMG.html">Gerador Arcano</a>
             <a href="calcArcana.html">Calculadora Arcana</a>
             <a href="">Personagens</a>
             <a href="">Downloads</a>
             <a href="">Galeria</a>
-            <a href="">Sobre</a>
+            <a href="">Sobre</a> -->
         </div>
     </nav>
-    
+
     <main>
         <aside>
         </aside>
-        <section class="calculadora-section">
+        <section class="calculadoraPer-section">
             <h2>Calculadora de Perícias</h2>
             <div class="calculadora-pericias">
                 <!-- Conteúdo da calculadora de perícias vai aqui -->
@@ -93,8 +93,8 @@
                     <option value=9>+9</option>
                     <option value=10>+10</option>
                 </select>
-                <button onclick="pericia()" id="calcularBtn">Calcular perícias</button>
-                <div id="resultado">
+                <button onclick="pericia()" id="calcularBtnPericia">Calcular perícias</button>
+                <div class="resultado">
                     <!-- Resultado será exibido aqui -->
                     <h3>Seus pontos de perícia são:</h3>
                     <h4>No Primeiro nível:</h4>
@@ -107,8 +107,18 @@
             </div>
 
         </section>
-        <section class="calculadora-section">
+
+        <section class="calculadoraAtbr-section">
             <h2>Calculadora de Atributos</h2>
+            <form class="atbrGet-container">
+                <label for="valorDado">Valor tirado no dado:</label>
+                <input autocomplete="off" name="valorDado" type="text">
+                <button type="button" onclick="atributo()" class="calcularBtnAtbr">Calcular atributo</button>
+            </form>
+            <div class="resultado">
+                <h3>Seu atributo é:</h3>
+                <p id="atributoFinal">0</p>
+            </div>
         </section>
     </main>
 </body>
