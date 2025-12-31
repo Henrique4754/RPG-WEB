@@ -15,8 +15,8 @@
     <link rel="stylesheet" href="css/calcArcana/calcArcana.css">
     <meta name="msapplication-TileColor" content="#ffffff" />
     <meta name="theme-color" content="#ffffff" />
-    <script src="scripts/menuHam.js"></script>
-    <script src="scripts/calcArcana.js"></script>
+    <script src="scripts/menuHam.js" defer></script>
+    <script src="scripts/calcArcana.js" defer></script>
     <title>Calculadora Arcana</title>
 </head>
 
@@ -112,13 +112,17 @@
             <h2>Calculadora de Atributos</h2>
             <form class="atbrGet-container">
                 <label for="valorDado">Valor tirado no dado:</label>
-                <input autocomplete="off" name="valorDado" type="text">
-                <button type="button" onclick="atributo()" class="calcularBtnAtbr">Calcular atributo</button>
+                <input autocomplete="off" name="valorDado" id="valorDado" type="text">
+                <button type="button" id="calcularBtnAtbr" class="calcularBtnAtbr">Calcular atributo</button>
             </form>
             <div class="resultado">
-                <h3>Seu atributo é:</h3>
+                <h3>Seu modificador é:</h3>
                 <p id="atributoFinal">0</p>
             </div>
+        </section>
+
+        <section>
+
         </section>
     </main>
 </body>
