@@ -46,7 +46,7 @@ body {
   border-radius: 999px;
   border: 1px solid #ccc;
 }
-.calculadoraPer-section button {
+.calculadoraPer-section #calcularBtnPericia {
   width: 100%;
   padding: 10px;
   background-color: #4CAF50;
@@ -56,7 +56,7 @@ body {
   cursor: pointer;
   font-size: 16px;
 } 
-.calculadoraPer-section button:hover {
+.calculadoraPer-section #calcularBtnPericia:hover {
   background-color: #45a049;
 }
 .calculadoraAtbr-section {
@@ -86,7 +86,7 @@ body {
   border-radius: 999px;
   border: 1px solid #ccc;
 }
-.calculadoraAtbr-section button {
+.calculadoraAtbr-section #calcularBtnAtbr {
   width: 100%;
   padding: 10px;
   background-color: #4CAF50;
@@ -97,6 +97,80 @@ body {
   font-size: 16px;
   margin-top: 10px;
 }
-.calculadoraAtbr-section button:hover {
+.calculadoraAtbr-section #calcularBtnAtbr:hover {
   background-color: #45a049;
+}
+.resultadoAtbr {
+  display: flex;
+  justify-content: space-between;
+}
+
+#limparHistoricoBtn{
+  width: 100%;
+  padding: 5px;
+  background-color: #f44336;
+  color: white;
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+  font-size: 0.8rem;
+}
+#limparHistoricoBtn:hover {
+  background-color: #45a049;
+}
+
+#ultimosValoresList{
+  height: 10rem;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media (max-width: 768px) {
+  .calculadoraPer-section,
+  .calculadoraAtbr-section {
+    max-width: 90%;
+    padding: 15px;
+    margin: 20px auto;
+  }
+
+  .calculadoraPer-section h2,
+  .calculadoraAtbr-section h2 {
+    font-size: 1.2rem;
+  }
+
+  .atbrGet-container > input[type="text"] {
+    width: 45%;
+  }
+
+  .resultadoAtbr {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  #ultimosValoresList {
+    height: 10rem;
+    max-height: 15rem;
+    overflow-y: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    background-attachment: scroll;
+  }
+
+  .calculadoraPer-section,
+  .calculadoraAtbr-section {
+    max-width: 95%;
+    padding: 10px;
+  }
+
+  .atbrGet-container > input[type="text"] {
+    width: 100%;
+  }
+
+  .calculadoraPer-section select {
+    font-size: 16px;
+  }
 }

@@ -115,9 +115,15 @@
                 <input autocomplete="off" name="valorDado" id="valorDado" type="text">
                 <button type="button" id="calcularBtnAtbr" class="calcularBtnAtbr">Calcular atributo</button>
             </form>
-            <div class="resultado">
-                <h3>Seu modificador é:</h3>
-                <p id="atributoFinal">0</p>
+            <div class="resultadoAtbr">
+                <h3 style="display: inline;">Último valor lido: <p id="atributoFinal" style="display: inline;">0</p></h3>
+                <div class="historicoAtbr-container">
+                    <h4>Seus Atributos:</h4>
+                    <ul id="ultimosValoresList">
+                        
+                    </ul>
+                    <button type="button" id="limparHistoricoBtn">Limpar Histórico</button>
+                </div>
             </div>
         </section>
 
