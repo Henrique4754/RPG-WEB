@@ -102,7 +102,8 @@ body {
 }
 .resultadoAtbr {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
+  border: #333 2px solid;
 }
 
 #limparHistoricoBtn{
@@ -120,6 +121,13 @@ body {
 }
 
 #ultimosValoresList{
+  height: 10rem;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#ultimasRolagensList{
   height: 10rem;
   list-style: none;
   display: flex;
