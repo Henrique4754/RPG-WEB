@@ -104,15 +104,17 @@ body {
 .resultadoAtbr {
   display: flex;
   justify-content: space-evenly;
-  border: #333 2px solid;
+  border-radius: 30px;
+  border: #45a049 1px solid;
 }
 
 #limparHistoricoBtn{
-  width: 100%;
+  width: 20%;
   padding: 5px;
   background-color: #f44336;
   color: white;
   border: none;
+  align-self: center;
   border-radius: 999px;
   cursor: pointer;
   font-size: 0.8rem;
@@ -153,7 +155,7 @@ body {
   }
 
   .resultadoAtbr {
-    flex-direction: column;
+    flex-direction: row;
     gap: 10px;
   }
 

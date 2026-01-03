@@ -113,7 +113,7 @@
             <form class="atbrGet-container">
                 <label for="valorDado">Valor tirado no dado:</label>
                 <input autocomplete="off" name="valorDado" id="valorDado" type="number">
-                <button type="button" id="calcularBtnAtbr" class="calcularBtnAtbr">Calcular atributo</button>
+                <button type="button" id="calcularBtnAtbr" class="calcularBtnAtbr">Calcular atributo <P style="font-size: .5rem; color: black; font-weight: 400;"><em>Use o botão ou aperte enter</em></P></button>
             </form>
             <h3 style="display: inline; text-align: center;">Último valor lido: <p id="atributoFinal" style="display: inline;">0</p></h3>
             <div class="resultadoAtbr">
@@ -126,9 +126,9 @@
                     <h4>Modificadores:</h4>
                     <ul id="ultimosValoresList">
                     </ul>
-                    <button type="button" onclick=limparHistorico() id="limparHistoricoBtn">Limpar Histórico</button>
                 </div>
             </div>
+            <button type="button" onclick=limparHistorico() id="limparHistoricoBtn">Limpar Histórico</button>
         </section>
 
         <section>
