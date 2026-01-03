@@ -80,11 +80,12 @@ body {
   color: #333;
   margin: 0px 10px 10px 10px;
 }
-.atbrGet-container > input[type="text"] {
+.atbrGet-container > input[type="number"] {
   width: 20%;
   padding: 5px;
   border-radius: 999px;
   border: 1px solid #ccc;
+  
 }
 .calculadoraAtbr-section #calcularBtnAtbr {
   width: 100%;
