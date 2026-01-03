@@ -106,6 +106,7 @@ body {
   justify-content: space-evenly;
   border-radius: 30px;
   border: #45a049 1px solid;
+  margin-bottom: 10px;
 }
 
 #limparHistoricoBtn{
