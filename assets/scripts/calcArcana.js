@@ -41,7 +41,7 @@ document
       document.getElementById("calcularBtnAtbr").click();
     }
   });
-// Função de calcular o valor de atributos inserido pelo usuário e armazenar em uma <ul> com limite para 6 valores armazenados.
+
 document
   .getElementById("calcularBtnAtbr")
   .addEventListener("click", function () {
@@ -49,18 +49,22 @@ document
     const diceValue = parseInt(diceValueInput.value);
     const totalPointsBruto = (diceValue - 10) / 2;
     const totalPointsLimpo = Math.floor(totalPointsBruto);
+    const atbrList = document.getElementById("ultimosValoresList");
 
-    
-// função para armazenar os valores inseridos no input dentro da <ul>
+    // função para armazenar os valores inseridos no input dentro da <ul>
     function listaAtbr() {
-      const atbrList = document.getElementById("ultimosValoresList");
+      const quantidadeLi = document.getElementById("ultimosValoresList").querySelectorAll("li").length;
       let novoItem = document.createElement("li");
-      if (diceValue <= 11) {
-        novoItem.textContent = "1";
+      if (quantidadeLi >= 6) {
+        alert("Você atingiu o número máximo de atributos!");
       } else {
-        novoItem.textContent = totalPointsLimpo;
+        if (diceValue <= 11) {
+          novoItem.textContent = "1";
+        } else {
+          novoItem.textContent = totalPointsLimpo;
+        }
+        atbrList.appendChild(novoItem);
       }
-      atbrList.appendChild(novoItem);
     }
 
     // Conserta o bug de zerar os modificadores, antes com a fórmula de cálculo tirada do livro do jogador, os inputs abaixo de 11 estavam retornando valor zero, quando de acordo com as regras deveria ser 1.
@@ -73,3 +77,8 @@ document
     }
     document.getElementById("valorDado").value = "";
   });
+
+function limparHistorico() {
+  document.getElementById("ultimosValoresList").innerHTML = "";
+  document.getElementById("atributoFinal").innerHTML = 0;
+}
