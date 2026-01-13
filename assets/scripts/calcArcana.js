@@ -11,9 +11,7 @@ function pericia() {
 
   const valorDescPrimNivel = parseFloat(valorClasse + valorIntMod);
   const valorPrimNivel = parseFloat((valorClasse + valorIntMod) * 4);
-  const valorNivelSub = parseFloat(
-    (valorClasse + valorIntMod) * valorNivel - valorDescPrimNivel
-  );
+  const valorNivelSub = parseFloat((valorClasse + valorIntMod) * valorNivel - valorDescPrimNivel);
 
   const totalPoints = valorPrimNivel + valorNivelSub;
 
