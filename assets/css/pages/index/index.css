@@ -122,11 +122,9 @@ img {
   height: auto;
   margin: 20px auto 0 auto;
   display: grid;
-  background-color: rgba(245, 245, 245, 0.479);
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
   border-radius: 1rem;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
   gap: 10px;
   padding: 10px;
 }
@@ -140,12 +138,13 @@ img {
   padding: 0.5rem;
   border-radius: 1rem;  
   text-align: center;
+   background-color: rgba(245, 245, 245, 0.479);
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
   color: rgb(2, 2, 2);
   font-weight: 300;
   text-transform: uppercase;
 }
-.div1> img, .div2> img, .div3> img, .div4> img, .div5> img, .div6> img, .div7> img, .div8 > img{
+.div1> img, .div2> img, .div3> img, .div4> img{
   height: 100px;
   width: 100px;
   margin: 0;
