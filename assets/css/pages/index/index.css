@@ -120,7 +120,7 @@ img {
   margin-top: 20px;
   width: 90%;
   height: auto;
-  justify-self: center;
+  margin: 20px auto 0 auto;
   display: grid;
   border: 1px solid black;
   grid-template-columns: repeat(2, 1fr);
@@ -132,7 +132,7 @@ img {
   width: 178px;
   height: 170px;
   padding: 0.5rem;
-  justify-self: center;
+  margin: 0 auto;
   border: 1px solid black;
   text-align: center;
 }
