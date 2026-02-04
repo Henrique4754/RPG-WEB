@@ -1,0 +1,188 @@
+@import url(../../css/global/global.css);
+body {
+  /* O caminho para a sua imagem */
+  background-image: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.5),
+      rgba(255, 255, 255, 0.5)
+    ),
+    url("../../images/global/calculadora\ arcana\ bg.png");
+
+  /* Faz a imagem cobrir todo o espaço disponível sem distorcer */
+  background-size: cover;
+
+  /* Evita que a imagem se repita (efeito azulejo) */
+  background-repeat: no-repeat;
+
+  /* Centraliza a imagem na tela */
+  background-position: center center;
+
+  /* (Opcional) Mantém a imagem fixa enquanto a página rola */
+  background-attachment: fixed;
+
+  /* (Opcional) Cor de fundo de segurança caso a imagem não carregue */
+  background-color: #333;
+  min-height: 100vh; /* Garante altura total */
+}
+.calculadoraPer-section {
+  background-color: rgba(255, 255, 255, 0.8); /* Fundo branco semi-transparente */
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 800px;
+  margin: 40px auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.calculadoraPer-section h2 {
+  text-align: center;
+  color: #333;
+  margin: 0px 10px 10px 10px;
+}
+
+.calculadoraPer-section select{
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 999px;
+  border: 1px solid #ccc;
+}
+.calculadoraPer-section #calcularBtnPericia {
+  width: 100%;
+  padding: 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+  font-size: 16px;
+} 
+.calculadoraPer-section #calcularBtnPericia:hover {
+  background-color: #45a049;
+}
+.calculadoraAtbr-section {
+  background-color: rgba(255, 255, 255, 0.8); /* Fundo branco semi-transparente */
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  border-radius: 10px;
+  max-width: 800px;
+  margin: 40px auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.atbrGet-container {
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.calculadoraAtbr-section h2 {
+  text-align: center;
+  color: #333;
+  margin: 0px 10px 10px 10px;
+}
+.atbrGet-container > input[type="number"] {
+  width: 20%;
+  padding: 5px;
+  border-radius: 999px;
+  border: 1px solid #ccc;
+  
+}
+.calculadoraAtbr-section #calcularBtnAtbr {
+  width: 100%;
+  padding: 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 10px;
+}
+.calculadoraAtbr-section #calcularBtnAtbr:hover {
+  background-color: #45a049;
+}
+.resultadoAtbr {
+  display: flex;
+  justify-content: space-evenly;
+  border-radius: 30px;
+  border: #45a049 1px solid;
+  margin-bottom: 10px;
+}
+
+#limparHistoricoBtn{
+  width: 20%;
+  padding: 5px;
+  background-color: #f44336;
+  color: white;
+  border: none;
+  align-self: center;
+  border-radius: 999px;
+  cursor: pointer;
+  font-size: 0.8rem;
+}
+#limparHistoricoBtn:hover {
+  background-color: #45a049;
+}
+
+#ultimosValoresList{
+  height: 10rem;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#ultimasRolagensList{
+  height: 10rem;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media (max-width: 768px) {
+  .calculadoraPer-section,
+  .calculadoraAtbr-section {
+    max-width: 90%;
+    padding: 15px;
+    margin: 20px auto;
+  }
+
+  .calculadoraPer-section h2,
+  .calculadoraAtbr-section h2 {
+    font-size: 1.2rem;
+  }
+
+  .atbrGet-container > input[type="text"] {
+    width: 45%;
+  }
+
+  .resultadoAtbr {
+    flex-direction: row;
+    gap: 10px;
+  }
+
+  #ultimosValoresList {
+    height: 10rem;
+    max-height: 15rem;
+    overflow-y: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    background-attachment: scroll;
+  }
+
+  .calculadoraPer-section,
+  .calculadoraAtbr-section {
+    max-width: 95%;
+    padding: 10px;
+  }
+
+  .atbrGet-container > input[type="text"] {
+    width: 100%;
+  }
+
+  .calculadoraPer-section select {
+    font-size: 16px;
+  }
+}

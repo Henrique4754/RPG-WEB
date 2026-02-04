@@ -9,13 +9,14 @@ nav {
   height: 100px;
   background-color: white;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   padding: 10px 30px;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
   position: sticky;
   top: 0;
+  text-align: center;
 }
 .navbar-links img {
   height: 70px;
@@ -26,7 +27,8 @@ nav {
 .navbar-links {
   align-items: center;
   justify-content: center;
-  gap: 20px;
+  gap: 5px;
+  flex-direction: column;
   display: flex;
 }
 .navbar-links > a {
