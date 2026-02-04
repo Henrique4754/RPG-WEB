@@ -31,9 +31,11 @@ body {
   min-height: 100vh; /* Garante altura total */
 }
 .welcome-section {
+  display: flex;
+  flex-direction: column;
   justify-self: center;
-  width: 90%;
   text-align: center;
+  width: 90%;
 }
 .welcome-section h1 {
   font-size: rem;
