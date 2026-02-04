@@ -185,4 +185,7 @@ body {
   .calculadoraPer-section select {
     font-size: 16px;
   }
+  #limparHistoricoBtn{
+  width: 40%;
+  }
 }
