@@ -52,7 +52,10 @@ body {
 }
 .btn {
   display: inline-block;
+  justify-self: center;
+  align-self: center;
   padding: 10px 20px;
+  width: 80%;
   background-color: #007bff;
   color: white;
   text-decoration: none;
