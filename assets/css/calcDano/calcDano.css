@@ -8,7 +8,7 @@ body {
       rgba(255, 255, 255, 0.7),
       rgba(255, 255, 255, 0.7)
     ),
-    url("../../../assets/images/global/Gemini_Generated_Image_mhfuh2mhfuh2mhfu.png");
+    url("../../../assets/images/global/Gemini_Generated_Image_2pe78r2pe78r2pe7.png");
 
   /* Faz a imagem cobrir todo o espaço disponível sem distorcer */
   background-size: cover;
@@ -91,5 +91,5 @@ body {
   border: 1px solid #007bff;
 }
 @media (max-width: 768px) {
-  
+
 }
