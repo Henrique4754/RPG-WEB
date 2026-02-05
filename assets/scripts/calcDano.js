@@ -10,16 +10,16 @@ document.getElementById("submit").addEventListener("click", function () {
   };
   const guerreiroNome = document.getElementById("nome").value;
   guerreiro.nome = guerreiroNome;
-  
+
   const pontosVida = document.getElementById("total-life").value;
   guerreiro.pontosVida = pontosVida;
-  
+
   const battleBoard = document.getElementById("battle-board");
   if (guerreiroNome == "" || pontosVida == "") {
     window.alert(
       "Você precisa preencher os campos:" +
-      "\n" +
-      "Nome do Guerreiro e Pontos de Vida",
+        "\n" +
+        "Nome do Guerreiro e Pontos de Vida",
     );
   } else {
     const selection = document.getElementById("target");
@@ -28,9 +28,9 @@ document.getElementById("submit").addEventListener("click", function () {
     newTarget.value = targetIndex;
     newTarget.textContent = guerreiroNome;
     selection.appendChild(newTarget);
-    
+
     guerreirosEmBatalha.push(guerreiro);
-    
+
     const card = document.createElement("div");
     card.className = "char-card";
     card.id = targetIndex;
@@ -44,26 +44,37 @@ document.getElementById("submit").addEventListener("click", function () {
     battleBoard.appendChild(card);
     document.getElementById("nome").value = "";
     document.getElementById("total-life").value = "";
-    
+
     console.log(guerreiro, guerreirosEmBatalha, targetIndex);
   }
 });
 
-function teste(){
-  let target = parseInt(document.getElementById('target').value)
-  let damage = parseInt(document.getElementById('damage-taken').value)
+function teste() {
+  let target = parseInt(document.getElementById("target").value);
+  let damage = parseInt(document.getElementById("damage-taken").value);
 
-  let nomeObjProp = guerreirosEmBatalha[target].nome
-  let vidaTotalObjProp = parseInt(guerreirosEmBatalha[target].pontosVida)
-  let danoRecebidoObjProp = parseInt(guerreirosEmBatalha[target].danoRecebido)
-  let vidaRestanteObjProp = parseInt(guerreirosEmBatalha[target].vidaRestante)
-  danoRecebidoObjProp = danoRecebidoObjProp + damage
-  vidaRestanteObjProp = vidaTotalObjProp - danoRecebidoObjProp
+  let nomeObjProp = guerreirosEmBatalha[target].nome;
+  let vidaTotalObjProp = parseInt(guerreirosEmBatalha[target].pontosVida);
+  let danoRecebidoObjProp = parseInt(guerreirosEmBatalha[target].danoRecebido);
+  let vidaRestanteObjProp = parseInt(guerreirosEmBatalha[target].vidaRestante);
+  danoRecebidoObjProp = danoRecebidoObjProp + damage;
+  vidaRestanteObjProp = vidaTotalObjProp - danoRecebidoObjProp;
 
-  const vidaPerdida = document.getElementById('vida-perdida-'+ target).innerText = (danoRecebidoObjProp)
-  const vidaRestante = document.getElementById('vida-restante-' + target).innerText = (vidaRestanteObjProp)
+  const vidaPerdida = (document.getElementById(
+    "vida-perdida-" + target,
+  ).innerText = danoRecebidoObjProp);
+  const vidaRestante = (document.getElementById(
+    "vida-restante-" + target,
+  ).innerText = vidaRestanteObjProp);
 
-  console.log({nomeObjProp, vidaTotalObjProp, danoRecebidoObjProp,vidaRestanteObjProp})
+  document.getElementById("target").value = "";
+  document.getElementById("damage-taken").value = "";
+  console.log({
+    nomeObjProp,
+    vidaTotalObjProp,
+    danoRecebidoObjProp,
+    vidaRestanteObjProp,
+  });
 
-  console.log({damage, target, vidaPerdida, vidaRestante}) 
+  console.log({ damage, target, vidaPerdida, vidaRestante });
 }
