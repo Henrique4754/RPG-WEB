@@ -5,6 +5,7 @@ document.getElementById("submit").addEventListener("click", function () {
   const guerreiro = {
     nome: "",
     pontosVida: 0,
+    danoTotal: [],
     danoRecebido: 0,
     vidaRestante: 0,
   };
@@ -12,17 +13,19 @@ document.getElementById("submit").addEventListener("click", function () {
   guerreiro.nome = guerreiroNome; //Atribui o input nome a propriedade nome dentro do objeto "guerreiro"
 
   const pontosVida = document.getElementById("total-life").value; //Acessa o input de entrada da quantidade de vida do personagem
-  guerreiro.pontosVida = pontosVida;//Atribui o input total-life a propriedade pontosVida dentro do objeto "guerreiro"
+  guerreiro.pontosVida = pontosVida; //Atribui o input total-life a propriedade pontosVida dentro do objeto "guerreiro"
 
   const battleBoard = document.getElementById("battle-board"); //Acessa a div battle-board dentro do arquivo html
 
-  if (guerreiroNome == "" || pontosVida == "") { //Verifica os dois inputs de entrada (nome e total-life) se ambos estão vazios ou se um dos dois está vazio. e emite um window.alert
+  if (guerreiroNome == "" || pontosVida == "") {
+    //Verifica os dois inputs de entrada (nome e total-life) se ambos estão vazios ou se um dos dois está vazio. e emite um window.alert
     window.alert(
       "Você precisa preencher os campos:" +
         "\n" +
         "Nome do Guerreiro e Pontos de Vida",
     );
-  } else { //Se os dois inputs citados acima estiverem preenchidos corretamente, os códigos abaixo são executados.
+  } else {
+    //Se os dois inputs citados acima estiverem preenchidos corretamente, os códigos abaixo são executados.
     const selection = document.getElementById("target"); //Acessa o input select dentro do html
     const newTarget = document.createElement("option"); //Cria um elemento "option" dentro da variavel newTarger
     targetIndex = targetIndex + 1; //Quando ativado, soma +1 a si proprio fazendo o contador andar de acordo com a quantidade de Objetos Guerreiro criadas dentro do arrat guerreirosEmBatalha
@@ -40,7 +43,7 @@ document.getElementById("submit").addEventListener("click", function () {
     <p>Vida Total: <span id="vida-total-${targetIndex}">${guerreirosEmBatalha[targetIndex].pontosVida}</span></p>
     <p>Vida Perdida: <span id="vida-perdida-${targetIndex}">${guerreirosEmBatalha[targetIndex].danoRecebido}</span></p>
     <p>Vida Restante: <span id="vida-restante-${targetIndex}">${guerreirosEmBatalha[targetIndex].vidaRestante}</span></p>
-    `;//Escreve as informações calculadas e colhidas dentro dos elementos no HTML
+    `; //Escreve as informações calculadas e colhidas dentro dos elementos no HTML
     battleBoard.appendChild(card); //Coloca tudo dentro da variavel card dentro do da div battle-board, declarada acima na linha 17
     //Abaixo zeramos os dois inputs de entrada, preparando ambos para inserir novos dados
     document.getElementById("nome").value = "";
@@ -50,32 +53,19 @@ document.getElementById("submit").addEventListener("click", function () {
   }
 });
 
-function teste() {
-  const target = parseInt(document.getElementById("target").value);
-  const damage = parseInt(document.getElementById("damage-taken").value);
+function teste2() {
+  const target = parseInt(document.getElementById("target").value); //Acessa e pega o valor indicado pela option selecionada dentro do input select
+  const damage = parseInt(document.getElementById("damage-taken").value); //Acessa e pega o valor digitado dentro do input de entrada "damage-taken" dentro do html
+  parseInt(guerreirosEmBatalha[target].danoTotal.push(damage)); //Pega o valor que foi indicado para a variavel damage e joga pra dentro do array danoRecebido que está no objeto guerreiro
+  let danoRecebido = 0; //variavel que vai receber o loop de iteração pelo array danoTotal dentro o guerreiro alvo
+  for (let i = 0; i < guerreirosEmBatalha[target].danoTotal.length; i++) { //loop que itera pelo array de guerreiro alvo e soma a quantidade de dano
+    danoRecebido += guerreirosEmBatalha[target].danoTotal[i];
+  }
+  guerreirosEmBatalha[target].danoRecebido = danoRecebido; //coloca o dano calculado dentro da propriedade dano recebido no objeto do guerreiro alvo
 
-  let nomeObjProp = guerreirosEmBatalha[target].nome;
-  let vidaTotalObjProp = parseInt(guerreirosEmBatalha[target].pontosVida);
-  let danoRecebidoObjProp = parseInt(guerreirosEmBatalha[target].danoRecebido);
-  let vidaRestanteObjProp = parseInt(guerreirosEmBatalha[target].vidaRestante);
-  danoRecebidoObjProp = danoRecebidoObjProp + damage;
-  vidaRestanteObjProp = vidaTotalObjProp - danoRecebidoObjProp;
+  const vidaPerdida = document.getElementById("vida-perdida-" + target).innerText = (guerreirosEmBatalha[target].danoRecebido); //armazena o dano total de acordo com o alvo selecionado
+  const vidaRestante = document.getElementById("vida-restante-" + target).innerText = ((parseInt(guerreirosEmBatalha[target].pontosVida) - guerreirosEmBatalha[target].danoRecebido)) //calcula a quantidade remanescente de vida de acordo com a vida total do alvo e o dano recebido do alvo
+  
 
-  const vidaPerdida = (document.getElementById(
-    "vida-perdida-" + target,
-  ).innerText = danoRecebidoObjProp);
-  const vidaRestante = (document.getElementById(
-    "vida-restante-" + target,
-  ).innerText = vidaRestanteObjProp);
-
-  document.getElementById("target").value = "";
-  document.getElementById("damage-taken").value = "";
-  console.log({
-    nomeObjProp,
-    vidaTotalObjProp,
-    danoRecebidoObjProp,
-    vidaRestanteObjProp,
-  });
-
-  console.log({ damage, target, vidaPerdida, vidaRestante });
+  console.log(damage, guerreirosEmBatalha);
 }
