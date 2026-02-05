@@ -31,18 +31,18 @@
     </nav>
     <main>
         <section id="damage-calc-sect">
-            <label for="nome">Entrar pra batalha:</label>
+            <label for="nome"><h2>Campo de batalha</h2></label>
             <input autocomplete="off" type="text" name="nome" id="nome" placeholder="Nome do guerreiro">
-            <label for="total-life">Vida Total:</label>
+            <!-- <label for="total-life">Vida Total:</label> -->
             <input type="text" name="total-life" id="total-life" placeholder="Pontos de vida">
-            <button id="submit">Enviar</button>
-            <label for="target">Alvo</label>
+            <button id="submit">Adicionar Guerreiro</button>
+            <label for="target"><h2>Causar Dano</h2></label>
             <select name="target" id="target">
                 <option value=>--Selecione o alvo--</option>
             </select>
-            <label for="damage-taken">Dano Causado</label>
-            <input type="number" name="damage-taken" id="damage-taken">
-            <button onclick="teste2()" title="Causar dano ao alvo">Causar Dano</button>
+            <input type="number" name="damage-taken" id="damage-taken" placeholder="Dano a ser causado no alvo">
+            <button onclick="teste2()" id="rolar-dano" title="Causar dano ao alvo">Rolar Dano</button>
+            <h2>Guerreiros em batalha</h2>
 
             <div id="battle-board">
                 <!-- <div class="char-card">
