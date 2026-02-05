@@ -1,57 +1,91 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
 
-<head>
-    <meta charset="UTF-8">
-
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="apple-touch-icon" sizes="180x180" href="images/global/peregrinos favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="images/global/peregrinos favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="images/global/peregrinos favicon/favicon-16x16.png">
-    <link rel="manifest" href="images/global/peregrinos favicon/site.webmanifest">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="images/global/peregrinos favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="images/global/peregrinos favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="images/global/peregrinos favicon/favicon-16x16.png"
+    />
+    <link
+      rel="manifest"
+      href="images/global/peregrinos favicon/site.webmanifest"
+    />
     <script src="scripts/calcDano.js" defer></script>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap');
-        @import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Cinzel:wght@400..900&display=swap');
-        @import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&display=swap');
-        @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-        </style>
-        <link rel="stylesheet" href="css/calcDano/calcDano.css">
-        <link rel="stylesheet" href="css/global/global.css">
+      @import url("https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Cinzel:wght@400..900&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+    </style>
+    <link rel="stylesheet" href="css/calcDano/calcDano.css" />
+    <link rel="stylesheet" href="css/global/global.css" />
     <title>Home</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <nav>
-        <div class="navbar-links">
-            <!-- <img src="images/pages/index/Brasão Os Peregrinos.jpg" alt="Logo Peregrinos" /> -->
-            <h1>Os Peregrinos</h1>
-            <a href="index.html">Home</a>
-        </div>
+      <div class="navbar-links">
+        <!-- <img src="images/pages/index/Brasão Os Peregrinos.jpg" alt="Logo Peregrinos" /> -->
+        <h1>Os Peregrinos</h1>
+        <a href="index.html">Home</a>
+      </div>
     </nav>
     <main>
-        <section id="damage-calc-sect">
-            <label for="nome"><h2>Campo de batalha</h2></label>
-            <input autocomplete="off" type="text" name="nome" id="nome" placeholder="Nome do guerreiro">
-            <!-- <label for="total-life">Vida Total:</label> -->
-            <input type="text" name="total-life" id="total-life" placeholder="Pontos de vida">
-            <button id="submit">Adicionar Guerreiro</button>
-            <label for="target"><h2>Causar Dano</h2></label>
-            <select name="target" id="target">
-                <option value=>--Selecione o alvo--</option>
-            </select>
-            <input type="number" name="damage-taken" id="damage-taken" placeholder="Dano a ser causado no alvo">
-            <button onclick="teste2()" id="rolar-dano" title="Causar dano ao alvo">Rolar Dano</button>
-            <h2>Guerreiros em batalha</h2>
+      <section id="damage-calc-sect">
+        <label for="nome"><h2>Campo de batalha</h2></label>
+        <input
+          autocomplete="off"
+          type="text"
+          name="nome"
+          id="nome"
+          placeholder="Nome do guerreiro"
+        />
+        <!-- <label for="total-life">Vida Total:</label> -->
+        <input
+          type="text"
+          name="total-life"
+          id="total-life"
+          placeholder="Pontos de vida"
+        />
+        <button id="submit">Adicionar Guerreiro</button>
+        <label for="target"><h2>Causar Dano</h2></label>
+        <select name="target" id="target">
+          <option value="">--Selecione o alvo--</option>
+        </select>
+        <input
+          type="number"
+          name="damage-taken"
+          id="damage-taken"
+          placeholder="Dano a ser causado no alvo"
+        />
+        <button onclick="teste2()" id="rolar-dano" title="Causar dano ao alvo">
+          Rolar Dano
+        </button>
+        <h2>Guerreiros em batalha</h2>
 
-            <div id="battle-board">
-                <!-- <div class="char-card">
+        <div id="battle-board">
+          <!-- <div class="char-card">
                     <p>Guerreiro: <span>Jotnar</span></p>
                     <p>Vida Total: <span>90</span></p>
                     <p>Vida Perdida: <span>45</span></p>
                 </div> -->
-            </div>
-        </section>
+        </div>
+      </section>
     </main>
-</body>
+  </body>
+</html>
