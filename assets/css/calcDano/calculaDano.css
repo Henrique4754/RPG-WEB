@@ -1,14 +1,8 @@
-@import url(/assets/css/global/global.css);
+@import url(../../css/global/global.css);
 
 body {
   /* O caminho para a sua imagem */
-  background-image:
-    linear-gradient(
-      to bottom,
-      rgba(255, 255, 255, 0.7),
-      rgba(255, 255, 255, 0.7)
-    ),
-    url("../../../assets/images/global/Gemini_Generated_Image_2pe78r2pe78r2pe7.png");
+  background-image: linear-gradient(to bottom,rgba(255, 255, 255, 0.7),rgba(255, 255, 255, 0.7)), url("../../../assets/images/global/Gemini_Generated_Image_mhfuh2mhfuh2mhfu.png");
 
   /* Faz a imagem cobrir todo o espaço disponível sem distorcer */
   background-size: cover;
