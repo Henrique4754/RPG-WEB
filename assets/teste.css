@@ -1,0 +1,90 @@
+@import url(css/global/global.css);
+body {
+  /* O caminho para a sua imagem */
+  background-image:
+    linear-gradient(
+      to bottom,
+      rgb(255, 255, 255, 0.522),
+      rgba(255, 255, 255, 0.522)
+    ),
+    url("images/pages/Historias/Inicio\ da\ Jornada\ a\ capital.jpg");
+
+  /* Faz a imagem cobrir todo o espaço disponível sem distorcer */
+  background-size: cover;
+
+  /* Evita que a imagem se repita (efeito azulejo) */
+  background-repeat: no-repeat;
+
+  /* Centraliza a imagem na tela */
+  background-position: center center;
+
+  /* (Opcional) Mantém a imagem fixa enquanto a página rola */
+  background-attachment: fixed;
+
+  /* (Opcional) Cor de fundo de segurança caso a imagem não carregue */
+  background-color: #333;
+  height: calc(100vh - 80px); /* Garante altura total */
+  scroll-behavior: smooth;
+}
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.tools-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.72);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(1.9px);
+  -webkit-backdrop-filter: blur(1.9px);
+  border: 1px solid rgb(255, 255, 255);
+  width: 70%;
+  border-radius: 40px;
+  padding: 0.5rem 1.3rem;
+  margin: 1rem;
+}
+.tools-container > h2 {
+  font-size: 1.2rem;
+  text-align: center;
+  position: static;
+  
+}
+.tools {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  gap: 1rem;
+  font-size: 0.9rem;
+}
+.tool-box > p {
+    font-family: 'Poppins', sans-serif;
+}
+.tools::-webkit-scrollbar {
+    display: none;
+}
+.tool-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  
+}
+.tools > .tool-box > a > img {
+  width: 50px;
+  border-radius: 999px;
+}
+
+@media (max-width: 768px) {
+  .tools {
+    overflow-x: scroll;
+    align-items: start;
+    font-size: 0.7rem;
+  }
+}
