@@ -97,6 +97,7 @@ section {
 #xp-progress{
   display: flex;
   padding: 1rem;
+  margin: auto 0;
   justify-self: center;
   flex-direction: row;
   justify-content: space-evenly;
