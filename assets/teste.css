@@ -37,7 +37,7 @@ section {
   align-items: center;
   justify-content: center;
   /* From https://css.glass */
-  background: rgba(255, 255, 255, 0.72);
+  background: rgba(255, 255, 255, 0.218);
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(1.9px);
@@ -48,7 +48,7 @@ section {
   padding: 1rem;
   gap: 0.5rem;
   margin: 1rem;
-} 
+}
 .tools-container > h2 {
   font-size: 1.2rem;
   text-align: center;
@@ -63,17 +63,16 @@ section {
   font-size: 0.9rem;
 }
 .tool-box > p {
-    font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 .tools::-webkit-scrollbar {
-    display: none;
+  display: none;
 }
 .tool-box {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  
 }
 .tools > .tool-box > a > img {
   width: 70px;
@@ -81,7 +80,7 @@ section {
 }
 
 @media (max-width: 768px) {
-  .tools-container{
+  .tools-container {
     width: 90%;
     border-radius: 16px;
   }
@@ -91,38 +90,56 @@ section {
     font-size: 0.7rem;
   }
   .tools > .tool-box > a > img {
-  width: 50px;
-  border-radius: 999px;
-}
-#xp-progress{
-  display: flex;
-  padding: 1rem;
-  margin: 0 auto;
-  justify-self: center;
-  flex-direction: row;
-  justify-content: space-evenly;
-  width: 90%;
-  background: rgba(255, 255, 255, 0);
-  border-radius: 16px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(12.9px);
-  -webkit-backdrop-filter: blur(12.9px);
-  border: 1px solid rgb(255, 255, 255);
-}
-#player-xp-board{
-  display: flex;
-  flex-direction: column;
-  align-self: start;
-}
-.player-xp > p{
-  font-size: 0.7rem;
-}
-#xp-explanation{
-  display: flex;
-  flex-direction: column;
-  align-self: auto;
-  text-align: justify;
-  width: 160px;
-  font-size: 0.8rem;
-}
+    width: 50px;
+    border-radius: 999px;
+  }
+  #xp-progress {
+    display: flex;
+    padding: 1rem;
+    margin: 0 auto;
+    justify-self: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 90%;
+    background: rgba(255, 255, 255, 0.218);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(12.9px);
+    -webkit-backdrop-filter: blur(12.9px);
+    border: 1px solid rgb(255, 255, 255);
+  }
+  #player-xp-board {
+    display: flex;
+    flex-direction: column;
+    align-self: start;
+  }
+  .player-xp > p {
+    font-size: 0.7rem;
+    font-family: "Poppins", sans-serif;
+  }
+  #xp-sect-content-container {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  #xp-explanation {
+    display: flex;
+    flex-direction: column;
+    align-self: auto;
+    text-align: center;
+    width: 160px;
+    font-size: 0.8rem;
+    padding: 0.5rem;
+    background: rgba(255, 255, 255, 0.282);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(1.9px);
+    -webkit-backdrop-filter: blur(1.9px);
+    border: 1px solid rgb(255, 255, 255);
+  }
+  #xp-explanation > p {
+    font-family: "Poppins", sans-serif;
+  }
 }
