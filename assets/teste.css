@@ -23,7 +23,7 @@ body {
 
   /* (Opcional) Cor de fundo de segurança caso a imagem não carregue */
   background-color: #333;
-  height: calc(100dvh + 80px); /* Garante altura total */
+  height: calc(100dvh); /* Garante altura total */
   scroll-behavior: smooth;
 }
 section {
@@ -40,8 +40,8 @@ section {
   background: rgba(255, 255, 255, 0.218);
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(1.9px);
   -webkit-backdrop-filter: blur(1.9px);
+  backdrop-filter: blur(1.9px);
   border: 1px solid rgb(255, 255, 255);
   width: fit-content;
   border-radius: 16px;
@@ -96,7 +96,7 @@ section {
   #xp-progress {
     display: flex;
     padding: 1rem;
-    margin: 0 auto;
+    margin: 0 auto 1rem auto;
     justify-self: center;
     flex-direction: column;
     justify-content: space-evenly;
@@ -104,9 +104,10 @@ section {
     background: rgba(255, 255, 255, 0.218);
     border-radius: 16px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(12.9px);
     -webkit-backdrop-filter: blur(12.9px);
+    backdrop-filter: blur(12.9px);
     border: 1px solid rgb(255, 255, 255);
+    gap: 0.5rem;
   }
   #player-xp-board {
     display: flex;
@@ -135,11 +136,45 @@ section {
     background: rgba(255, 255, 255, 0.282);
     border-radius: 16px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(1.9px);
     -webkit-backdrop-filter: blur(1.9px);
+    backdrop-filter: blur(1.9px);
     border: 1px solid rgb(255, 255, 255);
   }
   #xp-explanation > p {
     font-family: "Poppins", sans-serif;
+  }
+  #explanation {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    -webkit-backdrop-filter: blur(12.9px);
+    backdrop-filter: blur(12.9px);
+    border: 1px solid rgb(255, 255, 255);
+    width: 90%;
+    padding: 1rem;
+    gap: 0.5rem;
+  }
+  #explanation-content-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+
+  #explanation-content-container > p {
+    font-family: "Poppins", sans-serif;
+    font-size: 0.8rem;
+    background: rgba(255, 255, 255, 0.282);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    -webkit-backdrop-filter: blur(1.9px);
+    backdrop-filter: blur(1.9px);
+    border: 1px solid rgb(255, 255, 255);
+    padding: 0.5rem;
   }
 }
