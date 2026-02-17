@@ -145,6 +145,7 @@ section {
   }
   #inspiration-section {
     margin: 0 auto;
+    margin-bottom: 1rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -157,6 +158,7 @@ section {
     width: 90%;
     padding: 1rem;
     gap: 0.5rem;
+    
   }
   #inspiration-content-container {
     display: flex;
@@ -189,6 +191,5 @@ section {
     width: 100%;
     border-radius: 16px;
     margin-bottom: 0.5rem;
-
   }
 }
