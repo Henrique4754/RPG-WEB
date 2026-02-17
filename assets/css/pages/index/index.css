@@ -1,16 +1,11 @@
 @import url(../../global/global.css);
-a {
-  text-decoration: none;
-  color: inherit;
-}
-/* Obrigado gemini! */
 body {
   /* O caminho para a sua imagem */
   background-image:
     linear-gradient(
       to bottom,
-      rgba(255, 255, 255, 0.7),
-      rgba(255, 255, 255, 0.7)
+      rgb(255, 255, 255, 0.522),
+      rgba(255, 255, 255, 0.522)
     ),
     url("../../../images/pages/Historias/Inicio\ da\ Jornada\ a\ capital.jpg");
 
@@ -28,193 +23,173 @@ body {
 
   /* (Opcional) Cor de fundo de segurança caso a imagem não carregue */
   background-color: #333;
-  min-height: 100vh; /* Garante altura total */
+  height: calc(100dvh); /* Garante altura total */
+  scroll-behavior: smooth;
 }
-.welcome-section {
+section {
   display: flex;
   flex-direction: column;
-  justify-self: center;
-  text-align: center;
-  margin: 0 auto;
-  width: 90%;
+  align-items: center;
 }
-.welcome-section h1 {
-  font-size: rem;
-  text-transform: uppercase;
-  font-weight: 400;
-}
-.welcome-section p {
-  font-size: 1.2rem;
-  font-weight: 500;
-  margin: 20px 0;
-  text-transform: uppercase;
-  color: #2c2c2c;
-}
-.btn {
-  display: inline-block;
-  justify-self: center;
-  align-self: center;
-  padding: 10px 20px;
-  width: 80%;
-  background-color: #007bff;
-  color: white;
-  text-decoration: none;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
-}
-.btn:hover {
-  background-color: #0056b3;
-  cursor: pointer;
-}
-.card-btn {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: #007bff;
-  color: white;
-  text-decoration: none;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
-}
-.latest-updates {
-  justify-self: center;
-  margin: 20px 0 0 0;
+.tools-container {
   display: flex;
   flex-direction: column;
-  width: 90%;
   align-items: center;
   justify-content: center;
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.218);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  -webkit-backdrop-filter: blur(1.9px);
+  backdrop-filter: blur(1.9px);
+  border: 1px solid rgb(255, 255, 255);
+  width: fit-content;
+  border-radius: 16px;
+  padding: 1rem;
+  gap: 0.5rem;
+  margin: 1rem;
 }
-.latest-updates h2 {
-  margin-bottom: 20px;
+.tools-container > h2 {
+  font-size: 1.2rem;
   text-align: center;
 }
-.updates-container {
-  width: 70%;
+.tools {
+  width: 100%;
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
-  gap: 20px;
+  align-items: center;
+  justify-content: space-around;
+  gap: 1rem;
+  font-size: 0.9rem;
 }
-
-.update-card {
-  background-color: white;
-  border-radius: 10px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-  flex: 1 1 calc(33% - 20px);
-  transition: 0.3s ease-in-out;
+.tool-box > p {
+  font-family: "Poppins", sans-serif;
 }
-.update-card > a,
-img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  object-position: center;
-  border-radius: 10px;
-  margin-bottom: 15px;
+.tools::-webkit-scrollbar {
+  display: none;
 }
-
-.update-card:hover {
-  transform: scale(1.05);
-  cursor: pointer;
-}
-
-/* TESTE DE SECTION GRID PARA FERRAMENTAS DO RPG */
-.tools-section{
+.tool-box {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-top: 20px;
 }
-.grid-tools-sect {
-    margin-top: 20px;
-    width: min-content;
-    height: auto;
-    margin: 20px auto 0 auto;
-    display: grid;
-    border-radius: 1rem;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    gap: 10px;
-    padding: 10px;
-  }
-  .div1, .div2, .div3, .div4, .div5, .div6, .div7, .div8 {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    justify-self: center;
-    width: 178px;
-    height: 170px;
-    padding: 0.5rem;
-    border-radius: 1rem;  
-    text-align: center;
-    background-color: rgba(245, 245, 245, 0.925);
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    color: rgb(2, 2, 2);
-    font-weight: 500;
-    text-transform: uppercase;
-  }
-  .div1 a > img, .div2 a > img, .div3 a > img, .div4 a > img{
-    height: 100px;
-    width: 100px;
-    margin: 0;
-  }
-  
-  .div1 { grid-area: 1 / 1 / 2 / 2; }
-  .div2 { grid-area: 1 / 2 / 2 / 3; }
-  .div3 { grid-area: 2 / 1 / 3 / 2; }
-  .div4 { grid-area: 2 / 2 / 3 / 3; }
-  
-  /* .div5 { grid-area: 3 / 1 / 4 / 2; }
-  .div6 { grid-area: 3 / 2 / 4 / 3; }
-  .div7 { grid-area: 4 / 1 / 5 / 2; }
-  .div8 { grid-area: 4 / 2 / 5 / 3; } */
-@media screen and (max-width: 768px){
-  .grid-tools-sect {
-    margin-top: 20px;
+.tools > .tool-box > a > img {
+  width: 70px;
+  border-radius: 999px;
+}
+
+@media (max-width: 768px) {
+  .tools-container {
     width: 90%;
-    height: auto;
-    margin: 20px auto 0 auto;
-    display: grid;
-    border-radius: 1rem;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    gap: 10px;
-    padding: 10px;
+    border-radius: 16px;
   }
-  .div1, .div2, .div3, .div4, .div5, .div6, .div7, .div8 {
+  .tools {
+    overflow-x: scroll;
+    align-items: start;
+    font-size: 0.7rem;
+  }
+  .tools > .tool-box > a > img {
+    width: 50px;
+    border-radius: 999px;
+  }
+  #xp-progress {
+    display: flex;
+    padding: 1rem;
+    margin: 0 auto 1rem auto;
+    justify-self: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 90%;
+    background: rgba(255, 255, 255, 0.218);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    -webkit-backdrop-filter: blur(12.9px);
+    backdrop-filter: blur(12.9px);
+    border: 1px solid rgb(255, 255, 255);
+    gap: 0.5rem;
+  }
+  #player-xp-board {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    align-self: start;
+  }
+  .player-xp > p {
+    font-size: 0.7rem;
+    font-family: "Poppins", sans-serif;
+  }
+  #xp-sect-content-container {
+    display: flex;
+    width: 100%;
     align-items: center;
-    width: 178px;
-    height: 170px;
-    padding: 0.5rem;
-    border-radius: 1rem;  
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  #xp-explanation {
+    display: flex;
+    flex-direction: column;
+    align-self: auto;
     text-align: center;
-    background-color: rgba(245, 245, 245, 0.925);
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    color: rgb(2, 2, 2);
-    font-weight: 300;
-    text-transform: uppercase;
+    width: 45%;
+    font-size: 0.8rem;
+    padding: 0.5rem;
+    background: rgba(255, 255, 255, 0.282);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    -webkit-backdrop-filter: blur(1.9px);
+    backdrop-filter: blur(1.9px);
+    border: 1px solid rgb(255, 255, 255);
   }
-  .div1 a > img, .div2 a > img, .div3 a > img, .div4 a > img{
-    height: 100px;
-    width: 100px;
-    margin: 0;
+  #xp-explanation > p {
+    font-family: "Poppins", sans-serif;
   }
-  
-  .div1 { grid-area: 1 / 1 / 2 / 2; }
-  .div2 { grid-area: 1 / 2 / 2 / 3; }
-  .div3 { grid-area: 2 / 1 / 3 / 2; }
-  .div4 { grid-area: 2 / 2 / 3 / 3; }
-  
-  /* .div5 { grid-area: 3 / 1 / 4 / 2; }
-  .div6 { grid-area: 3 / 2 / 4 / 3; }
-  .div7 { grid-area: 4 / 1 / 5 / 2; }
-  .div8 { grid-area: 4 / 2 / 5 / 3; } */
+  #inspiration-section {
+    margin: 0 auto;
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    -webkit-backdrop-filter: blur(12.9px);
+    backdrop-filter: blur(12.9px);
+    border: 1px solid rgb(255, 255, 255);
+    width: 90%;
+    padding: 1rem;
+    gap: 0.5rem;
+    
+  }
+  #inspiration-content-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+  }
 
-
+  #inspiration-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: "Poppins", sans-serif;
+    font-size: 0.8rem;
+    background: rgba(255, 255, 255, 0.282);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    -webkit-backdrop-filter: blur(1.9px);
+    backdrop-filter: blur(1.9px);
+    border: 1px solid rgb(255, 255, 255);
+    padding: 0.5rem;
+  }
+  #inspiration-content > p {
+    font-family: "Poppins", sans-serif;
+    text-align: center;
+  }
+  #inspiration-content > img{
+    width: 100%;
+    border-radius: 16px;
+    margin-bottom: 0.5rem;
+  }
 }
